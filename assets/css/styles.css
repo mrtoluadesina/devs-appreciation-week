@@ -21,6 +21,10 @@ header {
   border-bottom: 1px solid rgba(43, 168, 93, 0.28);
 }
 
+header .logo a {
+  text-decoration: none;
+}
+
 header .logo h3,
 footer.main-footer .logo h3 {
   font-size: 24px;
@@ -236,6 +240,29 @@ section.signup .form-area input[type='submit'] {
   width: 100%;
 }
 
+
+
+section.banner-section.thank-you {
+  height: 70vh;
+}
+
+section.banner-section.thank-you p {
+  line-height: 40px;
+}
+section.banner-section.thank-you a {
+  color: #b6d15b;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+section.banner-section.thank-you ul {
+  margin-left: 30px;
+  margin-bottom: 2rem;
+}
+
+section.banner-section.thank-you ul li {
+  line-height: 25px;
+}
+
 @media screen and (min-width: 415px) {
   header {
     padding: 1rem 5rem;
@@ -274,6 +301,9 @@ section.signup .form-area input[type='submit'] {
   }
   section.aim .aim-detail-area h2 {
     padding-bottom: 1rem;
+  }
+  footer.main-footer .social-share ul li.hide-sm {
+    display: unset;
   }
 }
 
