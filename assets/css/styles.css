@@ -53,7 +53,7 @@ header nav a.btn {
 }
 
 section.banner-section, section.aim {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 }
 
 section.banner-section .intro {
@@ -88,7 +88,7 @@ section.aim {
   display: flex;
 }
 section.aim .aim-image-area {
-  /* position: relative; */
+  position: relative;
 }
 section.aim .aim-detail-area h2 {
   padding-bottom: 1rem;
@@ -120,6 +120,8 @@ section.signup {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  position: relative;
+  z-index: 2;
 }
 section.signup h1 {
   color: #fff;
@@ -216,7 +218,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
   section.banner-section {
     padding: 3rem 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -240,6 +242,14 @@ input[type=number]::-webkit-outer-spin-button {
   }
   section.aim .aim-image-area {
     flex: 0 0 50%;
+    position: relative;
+  }
+  section.aim .aim-image-area img {
+    position: absolute;
+    bottom: -35px;
+    left: -20%;
+    transform: scale(2);
+    z-index: 1
   }
   section.aim .aim-detail-area {
     padding: 2rem 5rem 2rem 0;
