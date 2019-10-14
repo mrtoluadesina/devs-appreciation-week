@@ -275,6 +275,9 @@ section.signup .form-area input[type='submit'] {
   section.aim .aim-detail-area h2 {
     padding-bottom: 1rem;
   }
+  footer.main-footer .social-share ul li.hide-sm {
+    display: unset;
+  }
 }
 
 @media screen and (min-width: 780px) {
