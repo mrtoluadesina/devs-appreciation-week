@@ -85,6 +85,10 @@ section.banner-section p {
 
 section.aim {
   background: #F0F0F0;
+  display: flex;
+}
+section.aim .aim-image-area {
+  /* position: relative; */
 }
 section.aim .aim-detail-area h2 {
   padding-bottom: 1rem;
@@ -141,13 +145,15 @@ section.signup .form-area input {
   color: #2BA85D;
   padding: 0;
   outline: none;
-  width: 150px;
+  width: 165px;
   padding: 0 10px;
+  text-align: center;
 }
 p.form-area-footer {
   color: #2BA85D;
   font-size: .8rem;
   padding: 1rem 0;
+  margin-top: 10px;
 }
 section.signup .form-area a {
   text-decoration: none;
@@ -187,6 +193,14 @@ footer.main-footer .social-share ul li img {
 }
 footer.main-footer .logo h3 {
   font-size: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 
 @media screen and (min-width: 415px) {
