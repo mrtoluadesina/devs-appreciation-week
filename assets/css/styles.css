@@ -85,6 +85,10 @@ section.banner-section p {
 
 section.aim {
   background: #F0F0F0;
+  display: flex;
+}
+section.aim .aim-image-area {
+  /* position: relative; */
 }
 section.aim .aim-detail-area h2 {
   padding-bottom: 1rem;
