@@ -55,7 +55,7 @@
     <section class="signup">
       <h1>Sign up for Cupcakes!</h1>
       <div class="form-area">
-        <form>
+        <form method="POST" action="form/submit.php">
           <p>
             My name is
             <input type="text" name="username" />, I work at
@@ -77,7 +77,12 @@
             *Please make sure all your details are correct, to make sure your
             team gets the love you are showing them. Thanks!
           </p>
-          <a href="#" class="btn">Oya! Send the cakes!</a>
+          <input
+            type="submit"
+            class="btn"
+            name="submit"
+            value="Oya! Send the cakes!"
+          />
         </form>
       </div>
     </section>
