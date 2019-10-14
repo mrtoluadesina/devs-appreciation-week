@@ -14,10 +14,10 @@ if(isset($_POST['submit'])) {
   $phone_number = filter_var($_POST['phonenumber'], FILTER_SANITIZE_STRING);
 
   if(verifyUser($email) > 0) {
-    echo 'Common!. You already requested for cupcakes';
+    header("Location: ../error.html");
   } else {
       if(!$name || !$office || !$office_address || !$team || !$email || !$phone_number) {
-        echo 'You are required to fill all fields';
+        header("Location: ../error.html");
       } else {
 
         $query = $conn->prepare("INSERT INTO users (name, office, office_address, team_amount, email, phone_number) VALUES (:name, :office, :office_address, :team_amount, :email, :phone_number)");
@@ -31,9 +31,9 @@ if(isset($_POST['submit'])) {
         $result = $query->execute();
 
         if($result) {
-          echo 'Submitted successfully';
+          header("Location: ../your-cupcakes-are-on-the-way.html");
         } else {
-          echo "Didn't work";
+          header("Location: ../error.html");
           die();
         }
       }
