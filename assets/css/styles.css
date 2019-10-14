@@ -236,6 +236,29 @@ section.signup .form-area input[type='submit'] {
   width: 100%;
 }
 
+
+
+section.banner-section.thank-you {
+  height: 70vh;
+}
+
+section.banner-section.thank-you p {
+  line-height: 40px;
+}
+section.banner-section.thank-you a {
+  color: #b6d15b;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+section.banner-section.thank-you ul {
+  margin-left: 30px;
+  margin-bottom: 2rem;
+}
+
+section.banner-section.thank-you ul li {
+  line-height: 25px;
+}
+
 @media screen and (min-width: 415px) {
   header {
     padding: 1rem 5rem;
