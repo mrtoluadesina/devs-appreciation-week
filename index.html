@@ -35,7 +35,10 @@
     </section>
     <section class="aim">
       <div class="aim-image-area">
-        <img src="./assets/images/daw-cupcake.svg" alt="devs appreciation week" />
+        <img
+          src="./assets/images/daw-cupcake.svg"
+          alt="devs appreciation week"
+        />
       </div>
       <article class="aim-detail-area">
         <h2>The love package</h2>
@@ -52,24 +55,34 @@
     <section class="signup">
       <h1>Sign up for Cupcakes!</h1>
       <div class="form-area">
-        <form>
+        <form method="POST" action="form/submit.php">
           <p>
             My name is
-            <input
-              type="text"
-            />, I work at <input type="text" />
+            <input type="text" name="username" />, I work at
+            <input type="text" name="office" />
           </p>
-          <p>located at <input type="text" />,</p>
+          <p>located at <input type="text" name="officeaddress" />,</p>
           <p class="number">
-            I want to share love to my team of <input type="number" /> developers.
+            I want to share love to my team of
+            <input type="number" name="team" /> developers.
           </p>
-          <p>My work email is <input type="email" />, the company website is <input type="text" />,</p>
-          <p>and you can call me on <input type="number" /></p>
+          <p>
+            My work email is <input type="email" name="email" />, the company
+            website is <input type="text" />,
+          </p>
+          <p>
+            and you can call me on <input type="number" name="phonenumber" />
+          </p>
           <p class="form-area-footer">
             *Please make sure all your details are correct, to make sure your
             team gets the love you are showing them. Thanks!
           </p>
-          <a href="#" class="btn">Oya! Send the cakes!</a>
+          <input
+            type="submit"
+            class="btn"
+            name="submit"
+            value="Oya! Send the cakes!"
+          />
         </form>
       </div>
     </section>

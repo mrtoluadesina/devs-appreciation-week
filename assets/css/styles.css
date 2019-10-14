@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -16,13 +16,15 @@ header {
   border-bottom: 1px solid rgba(43, 168, 93, 0.28);
 }
 
-header .logo h3, footer.main-footer .logo h3 {
+header .logo h3,
+footer.main-footer .logo h3 {
   font-size: 24px;
   font-weight: 800;
   color: #2ba85d;
 }
 
-header .logo h3 small, footer.main-footer .logo h3 small {
+header .logo h3 small,
+footer.main-footer .logo h3 small {
   font-size: 50%;
   font-weight: 400;
 }
@@ -52,7 +54,8 @@ header nav a.btn {
   border-radius: 4px;
 }
 
-section.banner-section, section.aim {
+section.banner-section,
+section.aim {
   padding: 2rem 1rem;
 }
 
@@ -61,7 +64,7 @@ section.banner-section .intro {
 }
 
 section.banner-section .intro > span {
-  color: #2BA85D;
+  color: #2ba85d;
   font-size: 14px;
   font-weight: 700;
 }
@@ -72,7 +75,7 @@ section.banner-section .intro h1 {
 }
 
 section.banner-section .intro h1 span {
-  color: #B5D25C;
+  color: #b5d25c;
   text-decoration: underline;
 }
 
@@ -84,7 +87,7 @@ section.banner-section p {
 }
 
 section.aim {
-  background: #F0F0F0;
+  background: #f0f0f0;
   display: flex;
 }
 section.aim .aim-image-area {
@@ -114,7 +117,7 @@ section.aim .aim-detail-area a {
   text-align: center;
 }
 section.signup {
-  background: #2BA85D;
+  background: #2ba85d;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,8 +144,8 @@ section.signup .form-area p {
 section.signup .form-area input {
   font-size: 1.5rem;
   border: none;
-  border-bottom: 2px solid #2BA85D;
-  color: #2BA85D;
+  border-bottom: 2px solid #2ba85d;
+  color: #2ba85d;
   padding: 0;
   outline: none;
   width: 165px;
@@ -150,15 +153,16 @@ section.signup .form-area input {
   text-align: center;
 }
 p.form-area-footer {
-  color: #2BA85D;
-  font-size: .8rem;
+  color: #2ba85d;
+  font-size: 0.8rem;
   padding: 1rem 0;
   margin-top: 10px;
 }
-section.signup .form-area a {
+section.signup .form-area input[type='submit'] {
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.8rem 2rem;
+  color: #fff;
 }
 section.signup .form-area p:not(.form-area-footer) {
   line-height: 40px;
@@ -184,8 +188,8 @@ footer.main-footer .social-share ul {
 }
 footer.main-footer .social-share ul li {
   display: inline-block;
-  padding: 0 .2rem;
-  font-size: .8rem;
+  padding: 0 0.2rem;
+  font-size: 0.8rem;
 }
 footer.main-footer .social-share ul li img {
   width: 15px;
@@ -195,12 +199,12 @@ footer.main-footer .logo h3 {
   font-size: inherit;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 @media screen and (min-width: 415px) {
@@ -263,8 +267,8 @@ input[type=number]::-webkit-outer-spin-button {
   }
   footer.main-footer .social-share ul li {
     display: inline-block;
-    padding: 0 .5rem;
-    font-size: .8rem;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
   }
   footer.main-footer .social-share ul li img {
     width: 15px;
@@ -272,5 +276,12 @@ input[type=number]::-webkit-outer-spin-button {
   }
   footer.main-footer .logo h3 {
     font-size: 24px;
+  }
+  section.signup .form-area input[type='submit'] {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    width: auto;
   }
 }
