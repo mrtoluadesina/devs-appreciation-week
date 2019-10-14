@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition-duration: 1000ms;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -14,6 +19,10 @@ header {
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid rgba(43, 168, 93, 0.28);
+}
+
+header .logo a {
+  text-decoration: none;
 }
 
 header .logo h3,
@@ -54,9 +63,8 @@ header nav a.btn {
   border-radius: 4px;
 }
 
-section.banner-section,
-section.aim {
-  padding: 2rem 1rem;
+section.banner-section, section.aim {
+  padding: 3rem 1rem;
 }
 
 section.banner-section .intro {
@@ -72,11 +80,18 @@ section.banner-section .intro > span {
 section.banner-section .intro h1 {
   line-height: 2rem;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+section.banner-section .intro h1 img {
+  width: 30px;
 }
 
 section.banner-section .intro h1 span {
   color: #b5d25c;
   text-decoration: underline;
+  padding: 0 5px 0 10px;
 }
 
 section.banner-section p {
@@ -89,9 +104,17 @@ section.banner-section p {
 section.aim {
   background: #f0f0f0;
   display: flex;
+  overflow: hidden;
 }
 section.aim .aim-image-area {
-  /* position: relative; */
+  position: relative;
+  order: 1;
+}
+section.aim .aim-image-area img {
+  width: 300px;
+  position: absolute;
+  left: -90px;
+  top: 80px;
 }
 section.aim .aim-detail-area h2 {
   padding-bottom: 1rem;
@@ -123,6 +146,8 @@ section.signup {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  position: relative;
+  z-index: 2;
 }
 section.signup h1 {
   color: #fff;
@@ -176,9 +201,9 @@ footer.main-footer {
   height: 70px;
   background: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 footer.main-footer .social-share {
   margin: 0 auto 0 0;
@@ -195,8 +220,8 @@ footer.main-footer .social-share ul li img {
   width: 15px;
   height: 15px;
 }
-footer.main-footer .logo h3 {
-  font-size: inherit;
+footer.main-footer .logo img {
+  width: 150px;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -205,6 +230,37 @@ input[type='number']::-webkit-outer-spin-button {
   -moz-appearance: none;
   appearance: none;
   margin: 0;
+}
+
+footer.main-footer .social-share ul li.hide-sm {
+  display: none;
+}
+
+section.signup .form-area input[type='submit'] {
+  width: 100%;
+}
+
+
+
+section.banner-section.thank-you {
+  height: 70vh;
+}
+
+section.banner-section.thank-you p {
+  line-height: 40px;
+}
+section.banner-section.thank-you a {
+  color: #b6d15b;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+section.banner-section.thank-you ul {
+  margin-left: 30px;
+  margin-bottom: 2rem;
+}
+
+section.banner-section.thank-you ul li {
+  line-height: 25px;
 }
 
 @media screen and (min-width: 415px) {
@@ -220,18 +276,50 @@ input[type='number']::-webkit-outer-spin-button {
   }
   section.banner-section {
     padding: 3rem 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+  }
+  section.aim {
+    display: flex;
+    overflow: unset;
+    position: relative;
+  }
+  section.aim .aim-image-area {
+    flex: 0 0 50%;
+    position: relative;
+    order: 0;
+  }
+  section.aim .aim-image-area img {
+    position: absolute;
+    width: 500px;
+    top: unset;
+    bottom: -100px;
+    left: -20%;
+    z-index: 1;
+  }
+  section.aim .aim-detail-area {
+    padding: 2rem 5rem 2rem 0;
+  }
+  section.aim .aim-detail-area h2 {
+    padding-bottom: 1rem;
+  }
+  footer.main-footer .social-share ul li.hide-sm {
+    display: unset;
   }
 }
 
 @media screen and (min-width: 780px) {
   section.banner-section {
     padding: 3rem 7rem;
+    margin-bottom: 7rem;
   }
 
   section.banner-section .intro h1 {
     font-size: 3rem;
     line-height: 3.5rem;
+  }
+
+  section.banner-section .intro h1 img {
+    width: 50px;
   }
 
   section.banner-section p {
@@ -240,16 +328,16 @@ input[type='number']::-webkit-outer-spin-button {
     line-height: 1.4rem;
   }
   section.aim {
-    display: flex;
+    padding: 3rem 7rem;
   }
-  section.aim .aim-image-area {
-    flex: 0 0 50%;
+  section.aim .aim-image-area img {
+    width: 500px;
+    bottom: -100px;
+    left: -35%;
+    z-index: 1;
   }
   section.aim .aim-detail-area {
     padding: 2rem 5rem 2rem 0;
-  }
-  section.aim .aim-detail-area h2 {
-    padding-bottom: 1rem;
   }
   section.signup {
     padding: 2rem;
@@ -283,5 +371,26 @@ input[type='number']::-webkit-outer-spin-button {
     padding: 0.8rem 2rem;
     color: #fff;
     width: auto;
+  }
+}
+
+@media screen and (min-width: 989px) {
+  section.aim .aim-image-area img {
+    width: 550px;
+    bottom: -120px;
+    left: -30%;
+    z-index: 1;
+  }
+  section.aim .aim-detail-area {
+    padding: 3rem 7rem 3rem 0;
+  }
+  section.aim .aim-detail-area h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  section.aim .aim-image-area img {
+    left: -10%;
   }
 }
