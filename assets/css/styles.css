@@ -21,6 +21,10 @@ header {
   border-bottom: 1px solid rgba(43, 168, 93, 0.28);
 }
 
+header .logo a {
+  text-decoration: none;
+}
+
 header .logo h3,
 footer.main-footer .logo h3 {
   font-size: 24px;
