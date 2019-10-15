@@ -18,10 +18,6 @@ if(isset($_POST['submit'])) {
   if(verifyUser($email) > 0) {
     header("Location: ../error.html");
   } else {
-      if(!$name || !$office || !$office_address || !$team || !$email || !$phone_number) {
-        header("Location: ../error.html");
-      } else {
-
         $query = $conn->prepare("INSERT INTO users (name, office, office_address, team_amount, email, phone_number, companywebsite) VALUES (:name, :office, :office_address, :team_amount, :email, :phone_number, :companywebsite)");
         $query->bindParam(':name', $name, PDO::PARAM_STR);
         $query->bindParam(':office', $office, PDO::PARAM_STR);
@@ -39,7 +35,7 @@ if(isset($_POST['submit'])) {
           header("Location: ../error.html");
           die();
         }
-      }
+      
     }
 }
 
