@@ -10,11 +10,18 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <div class="logo">
-          <a href="https://daw.decagonhq.com"><h3>daw<small>by Decagon</small></h3></a>
+        <a href="https://daw.decagonhq.com"
+          ><h3>daw<small>by Decagon</small></h3></a
+        >
       </div>
       <nav>
         <a href="https://decagonhq.com" target="_blank">About Decagon</a>
@@ -25,17 +32,26 @@
       <div class="intro">
         <span>&lt;developer's appreciation week /&gt;</span>
         <h1>Not every time code,</h1>
-        <h1>Sometimes <span>Cupcakes </span><img src="./assets/images/cupcake.png" alt="devs appreciation week" /></h1>
+        <h1>
+          Sometimes <span>Cupcakes </span
+          ><img
+            src="./assets/images/cupcake.png"
+            alt="devs appreciation week"
+          />
+        </h1>
       </div>
       <p>
         Developers, just like the backend of a website are not visible but play
-        a major role in organizations. We created this initiative to let them know
-        how loved and appreciated they are.
+        a major role in organizations. We created this initiative to let them
+        know how loved and appreciated they are.
       </p>
     </section>
     <section class="aim">
       <div class="aim-image-area">
-        <img src="./assets/images/daw-cupcake.png" alt="devs appreciation week" />
+        <img
+          src="./assets/images/daw-cupcake.png"
+          alt="devs appreciation week"
+        />
       </div>
       <article class="aim-detail-area">
         <h2>The appreciation package</h2>
@@ -43,7 +59,8 @@
           We’re sending out love in cupcakes to developers around the country.
         </p>
         <p>
-          Make your cupcake request before 2pm, to get it delivered the next day. Last order day is Thursday, October 17th, 2019.
+          Make your cupcake request before 2pm, to get it delivered the next
+          day. Last order day is Thursday, October 17th, 2019.
         </p>
         <a href="#cupcakes" class="btn">Sign Up</a>
       </article>
@@ -51,23 +68,34 @@
     <section id="cupcakes" class="signup">
       <h1>Sign up for Cupcakes!</h1>
       <div class="form-area">
+        <p class="errorMessage"></p>
         <form method="POST" action="form/submit.php">
           <p>
             My name is
-            <input type="text" name="username" />, I work at
-            <input type="text" name="office" />
+            <input type="text" name="username" id="username" />, I work at
+            <input type="text" name="office" id="office" />
           </p>
-          <p>located at <input type="text" name="officeaddress" />,</p>
+          <p>
+            located at
+            <input type="text" name="officeaddress" id="officeaddress" />,
+          </p>
           <p class="number">
             I want to share love to my team of
-            <input type="number" name="team" /> developers.
+            <input type="number" name="team" id="team" /> developers.
           </p>
           <p>
-            My work email is <input type="email" name="email" />, the company
-            website is <input type="text" />,
+            My work email is <input type="email" name="email" id="email" />, the
+            company website is
+            <input
+              type="text"
+              name="companywebsite"
+              id="companywebsite"
+              placeholder="http://decagonhq.com"
+            />,
           </p>
           <p>
-            and you can call me on <input type="number" name="phonenumber" />
+            and you can call me on
+            <input type="number" name="phonenumber" id="phonenumber" />
           </p>
           <p class="form-area-footer">
             *Please double check to ensure your details are correct.
@@ -77,6 +105,7 @@
             class="btn"
             name="submit"
             value="Oya! Send the cakes!"
+            id="submit"
           />
         </form>
       </div>
@@ -85,14 +114,31 @@
       <div class="social-share">
         <ul>
           <li class="hide-sm">Share with Friends</li>
-          <li><a href="https://twitter.com/DecagonIns" target="_blank"><img src="/assets/images/twitter-black-shape.svg" /></a></li>
-          <li><a href="https://www.instagram.com/decagoninstitute/" target="_blank"><img src="/assets/images/instagram-logo.svg" /></a></li>
-          <li><a href="https://www.facebook.com/decagoninstitute/" target="_blank"><img src="/assets/images/facebook-letter-logo.svg" /></a></li>
+          <li>
+            <a href="https://twitter.com/DecagonIns" target="_blank"
+              ><img src="/assets/images/twitter-black-shape.svg"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/decagoninstitute/"
+              target="_blank"
+              ><img src="/assets/images/instagram-logo.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/decagoninstitute/" target="_blank"
+              ><img src="/assets/images/facebook-letter-logo.svg"
+            /></a>
+          </li>
         </ul>
       </div>
       <div class="logo">
-        <a href="https://decagonhq.com" target="_blank"><img src="./assets/images/decagon@1.png" alt="decagon is 1"></a>
+        <a href="https://decagonhq.com" target="_blank"
+          ><img src="./assets/images/decagon@1.png" alt="decagon is 1"
+        /></a>
       </div>
     </footer>
+    <script src="./form/validateinput.js"></script>
   </body>
 </html>
