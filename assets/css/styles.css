@@ -63,7 +63,8 @@ header nav a.btn {
   border-radius: 4px;
 }
 
-section.banner-section, section.aim {
+section.banner-section,
+section.aim {
   padding: 3rem 1rem;
 }
 
@@ -240,8 +241,6 @@ section.signup .form-area input[type='submit'] {
   width: 100%;
 }
 
-
-
 section.banner-section.thank-you {
   height: 70vh;
 }
@@ -252,7 +251,7 @@ section.banner-section.thank-you p {
 section.banner-section.thank-you a {
   color: #b6d15b;
   font-weight: 800;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 section.banner-section.thank-you ul {
   margin-left: 30px;
@@ -261,6 +260,11 @@ section.banner-section.thank-you ul {
 
 section.banner-section.thank-you ul li {
   line-height: 25px;
+}
+.errorMessage {
+  background: #dd0d0d;
+  color: #fff;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 415px) {
@@ -371,6 +375,12 @@ section.banner-section.thank-you ul li {
     padding: 0.8rem 2rem;
     color: #fff;
     width: auto;
+  }
+  p.errorMessage {
+    background: #dd0d0d;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
   }
 }
 
