@@ -12,6 +12,8 @@ if(isset($_POST['submit'])) {
   $team = filter_var($_POST['team'], FILTER_SANITIZE_STRING);
   $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
   $phone_number = filter_var($_POST['phonenumber'], FILTER_SANITIZE_STRING);
+  $companywebsite = filter_var($_POST['companywebsite'], FILTER_SANITIZE_STRING);
+
 
   if(verifyUser($email) > 0) {
     header("Location: ../error.html");
@@ -20,13 +22,14 @@ if(isset($_POST['submit'])) {
         header("Location: ../error.html");
       } else {
 
-        $query = $conn->prepare("INSERT INTO users (name, office, office_address, team_amount, email, phone_number) VALUES (:name, :office, :office_address, :team_amount, :email, :phone_number)");
+        $query = $conn->prepare("INSERT INTO users (name, office, office_address, team_amount, email, phone_number, companywebsite) VALUES (:name, :office, :office_address, :team_amount, :email, :phone_number, :companywebsite)");
         $query->bindParam(':name', $name, PDO::PARAM_STR);
         $query->bindParam(':office', $office, PDO::PARAM_STR);
         $query->bindParam(':office_address', $office_address, PDO::PARAM_STR);
         $query->bindParam(':team_amount', $team, PDO::PARAM_STR);
         $query->bindParam(':email', $email, PDO::PARAM_STR);
         $query->bindParam(':phone_number', $phone_number, PDO::PARAM_STR);
+        $query->bindParam(':companywebsite', $companywebsite, PDO::PARAM_STR);
 
         $result = $query->execute();
 
